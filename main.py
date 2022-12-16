@@ -29,7 +29,7 @@ def get_files_content():
 
 def create_db_connection():
     """
-    This method returns the connection between db and python script
+    This method returns the connection between oracle db and python script
     """
     cx_Oracle.init_oracle_client(lib_dir=os.getenv('INSTANT_CLIENT_FOLDER_LOCATION'))
     dsn_tns = cx_Oracle.makedsn(os.getenv('DB_HOSTNAME'), os.getenv('DB_PORT'), service_name=os.getenv('SERVICE_NAME'))
